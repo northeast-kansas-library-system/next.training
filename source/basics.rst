@@ -44,9 +44,9 @@ Useful things to know
 Page header
 ***********
 
-The same header appears on every page in the staff client and allows you to easily find your way to any module you have access to:
+The same header appears on every page in the staff client and allows you to easily find your way to any module you have access to on the left hand side and you can always see your username and logged in library on the right.
 
-
+.. image:: images/080.jpg
 
 
 *********
@@ -62,17 +62,12 @@ Flexible search box
 *******************
 On the home page you should note the flexible input box to the left of the logo:
 
-.. only:: html
-
-  .. image:: images/040.gif
-
-
-.. only:: latex
-
-  .. image:: images/040.jpg
+.. image:: images/040.jpg
 
 
 This input box appears on almost every page in the staff client and allows you to quickly switch functions from check-out to check-in to searching and more.  The functions that are available vary from page to page in the staff client.
+
+On the home page, you can switch from Check out to Check in to Renew to Search Patron to Search the catalog all by clicking on the text under the input box.
 
 
 ***********
@@ -81,14 +76,9 @@ Breadcrumbs
 
 Breadcrumbs appear on every page in the staff client.  This allows you to easily see which module and what function of that module you are using.
 
-.. only:: html
+.. image:: images/050.jpg
 
-  .. image:: images/050.gif
-
-
-.. only:: latex
-
-  .. image:: images/050.jpg
+Each level to the left of a '>' symbol is one level up in the system's hierarchy.
 
 
 *****************
@@ -97,21 +87,24 @@ Language controls
 
 The bottom left hand corner of each page in the staff client includes controls to switch the catalog's built-in language from English to Spanish.
 
-.. only:: html
+  .. image:: images/060.jpg
 
-  .. image:: images/050.gif
-
-
-.. only:: latex
-
-  .. image:: images/050.jpg
+These controls only affect the language of the built-in controls in the system.  It will not change the language of any data we've added to the system such as patron names or bibliographic record information.
 
 
 ##############
 Basic check-in
 ##############
 
-There are 3 ways to start checking in items:
+
+*******************
+Checking in an item
+*******************
+
+
+A. Go to the check-in page (see  ":doc:`basic/checkinaccess`" for more information)
+B. Scan an item barcode in the check-in input box
+
 
 
 

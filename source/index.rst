@@ -11,6 +11,8 @@ Welcome to Next Search Catalog Staff Training's documentation!
    :caption: Contents:
 
   basics
+    checkinaccess
+    
 ..  opac
 ..  staff
 
