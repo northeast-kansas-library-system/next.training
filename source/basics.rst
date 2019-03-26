@@ -36,13 +36,48 @@ Things to note:
 .. image:: images/030.jpg
 
 
-######################
-The flexible input box
-######################
+#####################
+Useful things to know
+#####################
 
-Also on the home page you should note the flexible input box to the left of the logo:
+***********
+Page header
+***********
+
+The same header appears on every page in the staff client and allows you to easily find your way to any module you have access to:
+
+
+
+
+*********
+Next logo
+*********
+
+The Next Search Catalog logo appears on many pages in the staff client.  Clicking on the logo takes you back to the staff client home page.
+
+
+*******************
+Flexible search box
+*******************
+On the home page you should note the flexible input box to the left of the logo:
 
 .. image:: images/040.gif
+
+This input box appears on almost every page in the staff client and allows you to quickly switch functions from check-out to check-in to searching and more.  The functions that are available vary from page to page in the staff client.
+
+
+***********
+Breadcrumbs
+***********
+
+Breadcrumbs appear on every page in the staff client.  This allows you to easily see which module and what function of that module you are using.
+
+
+*****************
+Language controls
+*****************
+
+The bottom left hand corner of each page in the staff client includes 
 
 
 ##############
