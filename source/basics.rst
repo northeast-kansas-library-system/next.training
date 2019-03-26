@@ -36,9 +36,21 @@ Things to note:
 .. image:: images/030.jpg
 
 
+######################
+The flexible input box
+######################
+
+Also on the home page you should note the flexible input box to the left of the logo:
+
+.. image:: images/040.gif
+
+
 ##############
 Basic check-in
 ##############
+
+There are 3 ways to start checking in items:
+
 
 
 ###############
