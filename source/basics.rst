@@ -55,13 +55,22 @@ Next logo
 
 The Next Search Catalog logo appears on many pages in the staff client.  Clicking on the logo takes you back to the staff client home page.
 
+.. image:: images/070.jpg
 
 *******************
 Flexible search box
 *******************
 On the home page you should note the flexible input box to the left of the logo:
 
-.. image:: images/040.gif
+.. only:: html
+
+  .. image:: images/040.gif
+
+
+.. only:: latex
+
+  .. image:: images/040.jpg
+
 
 This input box appears on almost every page in the staff client and allows you to quickly switch functions from check-out to check-in to searching and more.  The functions that are available vary from page to page in the staff client.
 
@@ -72,12 +81,30 @@ Breadcrumbs
 
 Breadcrumbs appear on every page in the staff client.  This allows you to easily see which module and what function of that module you are using.
 
+.. only:: html
+
+  .. image:: images/050.gif
+
+
+.. only:: latex
+
+  .. image:: images/050.jpg
+
 
 *****************
 Language controls
 *****************
 
-The bottom left hand corner of each page in the staff client includes 
+The bottom left hand corner of each page in the staff client includes controls to switch the catalog's built-in language from English to Spanish.
+
+.. only:: html
+
+  .. image:: images/050.gif
+
+
+.. only:: latex
+
+  .. image:: images/050.jpg
 
 
 ##############
