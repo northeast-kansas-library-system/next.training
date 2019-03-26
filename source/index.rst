@@ -10,9 +10,11 @@ Welcome to Next Search Catalog Staff Training's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+  basics
 ..  opac
 ..  staff
-  basics
+
+
 
 Indices and tables
 ==================
