@@ -65,7 +65,7 @@ On the home page you should note the flexible input box to the left of the logo:
 .. image:: images/040.jpg
 
 
-This input box appears on almost every page in the staff client and allows you to quickly switch functions from check-out to check-in to searching and more.  The functions that are available vary from page to page in the staff client.
+This input box appears on *almost* every page in the staff client and allows you to quickly switch functions from check-out to check-in to searching and more.  The functions that are available vary from page to page in the staff client.
 
 On the home page, you can switch from Check out to Check in to Renew to Search Patron to Search the catalog all by clicking on the text under the input box.
 
@@ -101,8 +101,64 @@ Basic check-in
 Checking in an item
 *******************
 
+
+Check-in is your friend
+-----------------------
+
+Check-in is your friend.  If you find an item and you're not sure what to do with it, check in the item and the system will tell you wat to do with the item.  If it's been marked as "Lost" or "Missing," checking in the item will remove these statusses.  If the item needs to be shipped to another library, checking in the item will trigger the transfer process.  If the item is "In transit" back to your library, checking the item in will take the item out of transit and make it appear as "Available" in the catalog again.  Checking an item in updates an item's "Last seen" date, so checking an item in can help staff locate items by letting staff know when and where an item was last checked in.  The check-in process does not damage an item or the integrity of an item's bibliographic record.  So, if you're not sure what to do with an item, check it in and let the system tell you if the item needs any special handling.
+
+
+Normal check-in
+---------------
+
 A. Go to the check-in page (see  ":doc:`basic/checkinaccess`" for more information)
 B. Scan an item barcode in the check-in input box
+
+
+If the item being checked in was checked out to a patron at the time it was checked in, the *Patron* column will display the patron's barcode number.  This column will also indicate how many items that patron still has checked out.
+
+
+
+If the item being checked in was not checked out to a patron at the time it was checked in, the *Patron* column will say "Not checked out."
+
+
+
+
+Checking in an item on hold
+---------------------------
+
+If you check in an item that has has arrived at your library to fill a patron's request, checking in the item will generate a pop-up message indicating that the item needs to be held for that patron.
+
+
+
+When this happens you need to follow the procedures at your library for filling holds which may include printing a hold slip receipt for the item.
+
+
+Checking in an item to be shipped
+---------------------------------
+
+After you enter the barcode number, if the item needs to be shipped to another library, a transfer window will pop up.
+
+
+
+When this happens you need to follow the procedures at your library for shipping items between libraries.  If your library prints receipts, the courier code for the receiving library should match the courier code on the KLE label you use for shipping the item.
+
+
+Checking in an item that had been declared lost or missing
+----------------------------------------------------------
+
+If a pop-up window appears indicating that the item was lost but has now been found, this indicates that the item had a status of "LIST LOST STATUSES" at the time it was checked in.  Checking the item in will remove any of these statuses from the item record.
+
+
+Checking in an item with a message
+----------------------------------
+
+If an item appears with a check-in message, you should follow these steps.
+
+Checking in an item that cannot be found
+----------------------------------------
+
+If you check in an item and get an "Item not found" message, it is possible the item record has been deleted from the system.  If the item was deleted within the previous 13 months, you can find out basic information about the item by running report 3113.  If you wish to find any fines/fees history you can run report 3009.
 
 
 ###############
