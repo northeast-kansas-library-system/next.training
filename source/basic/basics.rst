@@ -9,14 +9,19 @@ Next Search Catalog history
 - The early years:
  - NExpress began as a courier system among Northeast Kansas libraries, and several Northeast Kansas Library System members participated with the Kansas City Public Library Consortia (KCLC) through 2008.
 - 2007:
- - In 2007, NEKLS began to explore alternative options to KCLC, and NEKLS decided in 2008 to manage its own shared catalog called "NExpress."  The Koha integrated library management system was chosen and NEKLS contracted with LibLime - a division of Progressive Technology Federal Systems, Inc. (PTFS).
+ - In 2007, NEKLS began to explore alternative options to KCLC, and NEKLS decided in 2008 to manage its own shared catalog called "NExpress."  The Koha integrated library management system was chosen and NEKLS contracted with LibLime - a division of Progressive Technology Federal Systems, Inc. (PTFS) - for support and server management.
 - 2008:
  - The NExpress shared catalog went live using Koha on August 15, 2008, with 13 participating libraries.
+- 2009:
+ - 11 more libraries joined Nexpress.
 - 2011:
  - In 2011, NExpress changed support companies from LibLime to ByWater Solutions.
+- 2016
+ - Paola Free Public Library joined NExpress.
 - 2018:
  - In August of 2018 the catalog was re-branded from NExpress to "Next Search Catalog" with the help of Zephyr Marketing in Kansas City.
 - 2019:
+ - Highland Community College joined Next Search Catalog.
  - As of January 2019, Next Search Catalog includes 44 public libraries; 1 school district; and 1 community college library.
 
 
@@ -70,7 +75,7 @@ Useful things to know
 Page header
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The same header appears on every page in the staff client and allows you to easily find your way to any module you have access to on the left hand side and you can always see your username and logged in library on the right.
+The same header appears on every page in the staff client and allows you to easily find your way to any module you have access to on the left hand side of the page.  You can always see your username and logged in library on the right hand side of the page.
 
 .. image:: ../images/080.jpg
 
@@ -78,20 +83,19 @@ The same header appears on every page in the staff client and allows you to easi
 Next logo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Next Search Catalog logo appears on many pages in the staff client.  Clicking on the logo takes you back to the staff client home page.
+The Next Search Catalog logo appears on most pages in the staff client.  Clicking on the logo takes you back to the staff client home page.
 
 .. image:: ../images/070.jpg
 
 Flexible search box
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-On the home page you should note the flexible input box to the left of the logo:
+A flexible input box appears on most pages just to the right of the logo:
 
 .. image:: ../images/040.jpg
 
-
-This input box appears on *almost* every page in the staff client and allows you to quickly switch functions from check-out to check-in to searching and more.  The functions that are available vary from page to page in the staff client.
-
 On the home page, you can switch from Check out to Check in to Renew to Search Patron to Search the catalog all by clicking on the text under the input box.
+
+The flexible input box appears on *almost* every page in the staff client and allows you to quickly switch functions.  The functions that are available vary from page to page in the staff client.
 
 
 .. raw:: latex
