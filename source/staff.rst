@@ -4,6 +4,10 @@ Staff client training for Next Search Catalog staff
 Logging in
 ----------
 
+Go to the staff client home page and enter your username and password
+
+.. image:: images/010.loginscreen.jpg
+
 Home page overview
 ------------------
 .. -a. navbar left
