@@ -101,11 +101,8 @@ Basic check-in
 Checking in an item
 *******************
 
-
 A. Go to the check-in page (see  ":doc:`basic/checkinaccess`" for more information)
 B. Scan an item barcode in the check-in input box
-
-
 
 
 ###############
@@ -116,3 +113,13 @@ Basic check-out
 #############################
 Creating a new patron account
 #############################
+
+
+#####################
+Searching the catalog
+#####################
+
+
+##################
+Requesting an item
+##################
