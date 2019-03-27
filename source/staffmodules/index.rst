@@ -6,12 +6,23 @@
 Next Search Catalog Staff Training
 ==================================
 
-
 .. toctree::
    :maxdepth: 2
 
-   basic/basics
-   basic/appendix
+
+  circulation
+  patrons
+  advanced.search
+  lists
+  authorities
+  course.reserves
+  cataloging
+  serials
+  acquisitions
+  reports
+  tools
+  administration
+  about.koha
 
 ..  opac
 ..  staff

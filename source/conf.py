@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Next Search Catalog Staff Training'
+project = 'Next Search Catalog - training and '
 copyright = '2019, NEKLS Staff'
 author = 'NEKLS Staff'
 
 # The short X.Y version
-version = ''
+# version = '19.01'
 # The full version, including alpha/beta/rc tags
-release = '19.01'
+# release = '19.01'
 
 
 # -- General configuration ---------------------------------------------------
