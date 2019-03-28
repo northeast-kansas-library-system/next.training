@@ -268,6 +268,9 @@ Make sure you’ve got the correct account
 Scan the item barcode in the “Enter item barcode”field
 
 .. image:: ../images/280.jpg
+
+The "Checkouts table will update with information about the item you just checked out"
+
 .. image:: ../images/290.jpg
 
 Follow your library’s procedures for errors if any error messages pop up
