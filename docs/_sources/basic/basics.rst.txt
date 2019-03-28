@@ -2,7 +2,6 @@ Basic staff training
 =====================
 
 
-
 Next Search Catalog history
 ---------------------------
 
@@ -254,14 +253,42 @@ If the item was deleted within the previous 13 months, you can find out basic in
 Checking items out
 ------------------
 
+Access the patron’s account
+
+.. image:: ../images/260.jpg
+
+Make sure you’ve got the correct account
+
+.. image:: ../images/270.jpg
+
+.. raw:: latex
+
+    \newpage
+
+Scan the item barcode in the “Enter item barcode”field
+
+.. image:: ../images/280.jpg
+.. image:: ../images/290.jpg
+
+Follow your library’s procedures for errors if any error messages pop up
+
+.. image:: ../images/300.jpg
+
+.. raw:: latex
+
+    \newpage
+
+Print a receipt if needed once all items have been checked out
+
+.. image:: ../images/305.jpg
 
 
 .. raw:: latex
 
     \newpage
 
-Creating a new patron account
------------------------------
+.. Creating a new patron account
+.. -----------------------------
 
 
 
@@ -272,11 +299,41 @@ Creating a new patron account
 Searching the catalog
 ---------------------
 
+The “Search the catalog” field in the flexible search box is a simple keyword search.
 
+.. image:: ../images/210.jpg
+
+The advanced search page offers you more flexibility for searching.
+
+.. image:: ../images/215.jpg
 
 .. raw:: latex
 
     \newpage
 
-Requesting an item
-------------------
+The “Advanced search” page allows multiple search types
+
+.. image:: ../images/220.jpg
+
+An advanced search can be limited by Collection code, Item type, and Shelving location
+
+.. image:: ../images/230.jpg
+
+An advanced search can also be limited by year and language (provided that the language information is included in the bibliographic record)
+
+.. image:: ../images/240.jpg
+
+.. raw:: latex
+
+    \newpage
+
+Searches can also be limited by library and availability
+
+.. image:: ../images/250.jpg
+
+.. raw:: latex
+
+    \newpage
+
+.. Requesting an item
+.. ------------------

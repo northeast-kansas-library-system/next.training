@@ -6,7 +6,7 @@ Logging in
 
 Go to the staff client home page and enter your username and password
 
-.. image:: images/010.loginscreen.jpg
+.. image:: images/010.jpg
 
 Home page overview
 ------------------
