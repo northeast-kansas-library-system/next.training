@@ -35,6 +35,10 @@ Go to the staff client home page and enter your username and password
 
 .. image:: ../images/010.jpg
 
+Note:
+
+If you see a "You must reset your password" message, please see the instructions at (":ref:`stafflocked`") to learn how to unlock the account.
+
 
 
 .. raw:: latex
