@@ -90,3 +90,46 @@ Note: most staff accounts such as LIBRARYCIRC; LIBRARYTECH; and LIBRARYDIRECTOR 
 7. Go back to the login page and try to log in again with the new password.
 
 .. image:: ../images/010.jpg
+
+.. _deletedtimeline:
+
+Timeline for deleted items
+--------------------------
+
+A. Patron checks out an item and a due date is assigned to the item (the due date may be updated if the patron renews the item)
+B. X days after an item's due date, the patron is sent a first overdue notice - the number of days varies by library
+C. 35 days after an item's due date, the patron is sent a second overdue notice saying that the item will be declared "Lost" in 10 more days
+D. 45 days after an item's due date, the patron is sent a third overdue notice saying that they are being billed for the replacement cost of the item
+E. 46 days after an item's due date at between 12:01 a.m. and 2:00 a.m., the item's status is changed from "checked out" to "Lost (more than 45 days overdue)"
+  - when the status is changed to "Lost (more than 45 days overdue)" the item is removed from the list of items checked out to the patron and the patron is billed for the replacement cost of the item as recorded in the item record (Marc field 952$v)
+F. 13 months after the item has been declared "Lost (more than 45 days overdue) the system will automatically delete the item record
+  - At this time, a copy of the item's record is moved from the "items" table in the database to the "deleteditems" table
+  - ** some libraries have policies and processes in place to manually delete these items before the 13 month automatic deletion has been triggered
+G. 13 months after the item data has been moved from "items" to "deleteditems" the system will automatically delete the data from the "deleteditms" table - this is done to reduce the size of the database
+
+Frequently asked questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Q: "A patron returned an item that has been deleted.  How can I find out more information about this deleted item?"
+
+A: If the item was deleted less than 13 months ago - whether it was deleted automatically or manually - you can run report 3113 to find out more information about the item.  This report shows the following information about a deleted item:
+
+- Date and time of deletion
+- Item home branch
+- Item current branch
+- Shelving location
+- Item type
+- Collection code
+- Call#
+- Title
+- Item barcode
+- Item ID number
+- Damaged status at time of deletion
+- Lost status at time of deletion
+- Withdrawn status at time of deletion
+- Link to the bibliogrpahic record -- unless the bibliographic record has also been deleted
+- Link to report 3009 (clicking on this link searches for the item barcode number in every patron's fine records)
+
+Q: "Someone returned an item that has been deleted.  How do I find out if someone paid for the item?"
+
+A: You can run report 3009 and search the fines/fees table for the entire system for any item barcode number that has been recorded in the "Description" field of the fines record - whether the item that goes with that barcode number has been deleted or not.  This means that, if a patron has been automatically billed, this report will show that patron's barcode number.  However, this report will also show you any other automatically generated fees plus any automatically created credits that include that item barcode number.  This report will not show you any manually created invoices or manually created credits - unless the staff member that created the invoice or credit added the barcode number of the item to the manually created invoice or credit.

@@ -102,6 +102,57 @@
 <img alt="../_images/0101.jpg" src="../_images/0101.jpg" />
 </div>
 </div>
+<div class="section" id="timeline-for-deleted-items">
+<span id="deletedtimeline"></span><h2>Timeline for deleted items<a class="headerlink" href="#timeline-for-deleted-items" title="Permalink to this headline">¶</a></h2>
+<ol class="upperalpha simple">
+<li>Patron checks out an item and a due date is assigned to the item (the due date may be updated if the patron renews the item)</li>
+<li>X days after an item’s due date, the patron is sent a first overdue notice - the number of days varies by library</li>
+<li>35 days after an item’s due date, the patron is sent a second overdue notice saying that the item will be declared “Lost” in 10 more days</li>
+<li>45 days after an item’s due date, the patron is sent a third overdue notice saying that they are being billed for the replacement cost of the item</li>
+<li>46 days after an item’s due date at between 12:01 a.m. and 2:00 a.m., the item’s status is changed from “checked out” to “Lost (more than 45 days overdue)”</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>when the status is changed to “Lost (more than 45 days overdue)” the item is removed from the list of items checked out to the patron and the patron is billed for the replacement cost of the item as recorded in the item record (Marc field 952$v)</li>
+</ul>
+</div></blockquote>
+<ol class="upperalpha simple" start="6">
+<li>13 months after the item has been declared “Lost (more than 45 days overdue) the system will automatically delete the item record</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>At this time, a copy of the item’s record is moved from the “items” table in the database to the “deleteditems” table</li>
+<li>** some libraries have policies and processes in place to manually delete these items before the 13 month automatic deletion has been triggered</li>
+</ul>
+</div></blockquote>
+<ol class="upperalpha simple" start="7">
+<li>13 months after the item data has been moved from “items” to “deleteditems” the system will automatically delete the data from the “deleteditms” table - this is done to reduce the size of the database</li>
+</ol>
+<div class="section" id="frequently-asked-questions">
+<h3>Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h3>
+<p>Q: “A patron returned an item that has been deleted.  How can I find out more information about this deleted item?”</p>
+<p>A: If the item was deleted less than 13 months ago - whether it was deleted automatically or manually - you can run report 3113 to find out more information about the item.  This report shows the following information about a deleted item:</p>
+<ul class="simple">
+<li>Date and time of deletion</li>
+<li>Item home branch</li>
+<li>Item current branch</li>
+<li>Shelving location</li>
+<li>Item type</li>
+<li>Collection code</li>
+<li>Call#</li>
+<li>Title</li>
+<li>Item barcode</li>
+<li>Item ID number</li>
+<li>Damaged status at time of deletion</li>
+<li>Lost status at time of deletion</li>
+<li>Withdrawn status at time of deletion</li>
+<li>Link to the bibliogrpahic record – unless the bibliographic record has also been deleted</li>
+<li>Link to report 3009 (clicking on this link searches for the item barcode number in every patron’s fine records)</li>
+</ul>
+<p>Q: “Someone returned an item that has been deleted.  How do I find out if someone paid for the item?”</p>
+<p>A: You can run report 3009 and search the fines/fees table for the entire system for any item barcode number that has been recorded in the “Description” field of the fines record - whether the item that goes with that barcode number has been deleted or not.  This means that, if a patron has been automatically billed, this report will show that patron’s barcode number.  However, this report will also show you any other automatically generated fees plus any automatically created credits that include that item barcode number.  This report will not show you any manually created invoices or manually created credits - unless the staff member that created the invoice or credit added the barcode number of the item to the manually created invoice or credit.</p>
+</div>
+</div>
 </div>
 
 
@@ -122,6 +173,10 @@
 <li><a class="reference internal" href="#staff-account-locked-due-to-unsuccessful-login-attempts">Staff account locked due to unsuccessful login attempts</a><ul>
 <li><a class="reference internal" href="#unlock-by-calling-nekls">Unlock by calling NEKLS</a></li>
 <li><a class="reference internal" href="#unlock-through-the-opac">Unlock through the OPAC</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#timeline-for-deleted-items">Timeline for deleted items</a><ul>
+<li><a class="reference internal" href="#frequently-asked-questions">Frequently asked questions</a></li>
 </ul>
 </li>
 </ul>
