@@ -108,8 +108,8 @@ F. 13 months after the item has been declared "Lost (more than 45 days overdue) 
   - ** some libraries have policies and processes in place to manually delete these items before the 13 month automatic deletion has been triggered
 G. 13 months after the item data has been moved from "items" to "deleteditems" the system will automatically delete the data from the "deleteditms" table - this is done to reduce the size of the database
 
-Frequently asked questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Frequently asked questions about deleted items
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Q: "A patron returned an item that has been deleted.  How can I find out more information about this deleted item?"
 
