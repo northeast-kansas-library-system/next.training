@@ -16,7 +16,10 @@ This cron-job covers three situations for us.  In practice, when cataloging staf
 
 The settings for this cron-job are:
 
-20 2 * * 0 nekls-koha $HOME/drop_empty_bibs.pl --days=14 --ignore_url --silent --update > /dev/null
+.. code-block:: perl
+   :linenos:
+
+   20 2 * * 0 nekls-koha $HOME/drop_empty_bibs.pl --days=14 --ignore_url --silent --update > /dev/null
 
 - 20 2 * * 0 sets the schedule at every Sunday morning at 2:20 a.m.
 - nekls-koha $HOME/drop_empty_bibs.pl tells the server which script to execute
