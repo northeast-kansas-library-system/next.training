@@ -79,11 +79,7 @@ pygments_style = 'sphinx'
 
 # html_theme = 'classic'
 
-import sphinx_hand_theme
-
-html_theme = "sphinx_hand_theme"
-
-html_theme_path = [sphinx_hand_theme.get_html_theme_path()]
+html_theme = "sphinx_rtd_theme"
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
