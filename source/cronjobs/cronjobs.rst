@@ -1,6 +1,51 @@
 Automatic processes running on our system
 =========================================
 
+.. _holds_queue:
+
+Holds queue generation
+----------------------
+
+This script runs every day at:
+
+- 6:52 a.m.
+- 7:52 a.m.
+- 8:52 a.m.
+- 9:52 a.m.
+- 10:52 a.m.
+- 12:52 p.m.
+- 2:52 p.m.
+- 4:52 p.m.
+- 6:52 p.m.
+- 8:52 p.m.
+- 10:52 p.m.
+- 12:52 a.m.
+- 2:52 a.m.
+- 4:52 a.m.
+
+We have a cron-job running on the server that re-builds the requests pick-list at regular intervals.
+
+The purpose of this script for Next Search Catalog is to regenerate the pick-list regularly so that requests for materials are spread amongst the libraries randomly.
+
+ADDITIONAL INFORMATION - paragraph
+
+The settings for this cron-job are:
+
+.. code-block:: perl
+   :linenos:
+
+   52 */2 * * * nekls-koha $KOHA_CRON_PATH/holds/build_holds_queue.pl >/dev/null 2>&1
+   52 7,9 * * * nekls-koha $KOHA_CRON_PATH/holds/build_holds_queue.pl >/dev/null 2>&1
+
+- 52 \*/2 * * * in the first line sets the schedule at 52 minutes past the hour for every even numbered hour
+- 52 7,9 * * * in the second line sets the schedule to also include 52 minutes past the hour at 7:00 a.m. and 9:00 a.m.
+- nekls-koha $KOHA_CRON_PATH/holds/build_holds_queue.pl tells the server which script to execute
+- >/dev/null 2>&1 prevents the script from mailing an error log to the system administrator
+
+
+
+
+
 .. _cron_empty_bibs:
 
 Empty bibliographic record deletion
