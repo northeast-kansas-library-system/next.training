@@ -1,0 +1,23 @@
+
+
+//put a reference point in the RST file above the section heading
+.. _cron_description:
+
+TITLE GOES HERE (with dashes underneath ti indicate section)
+------------------------------------------------------------
+
+This script runs every ____________________.
+
+WWe have a cron-job running on the server that _________________.
+
+The purpose of this script for Next Search Catalog is to ___________.
+
+ADDITIONAL INFORMATION - paragraph
+
+The settings for this cron-job are:
+
+COPY THE SETTINGS FROM THE CRONTAB FILE
+
+- * * * * 0 sets the schedule at every _____
+- nekls-koha _____ tells the server which script to execute
+- Other settings as needed
