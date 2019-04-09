@@ -26,11 +26,14 @@ This script runs every day at:
    "6:52 p.m.","6:52 a.m."
    "",""
 
+We have a cron-job running on the server that re-builds the holds queue at regular intervals.
 
+The purpose of this script for Next Search Catalog is to regenerate the pick-list at 1 hour intervals in the mornings and at 2 hour intervals in the afternoon so that requests for materials are spread amongst the libraries randomly and the holds queue is regenerated just before the beginning of the hour.  This way, if staff print their library's holds report on the hour between 8:00 a.m. and 11:00 a.m., the report will be up-to-date.
 
-We have a cron-job running on the server that re-builds the requests pick-list at regular intervals.
+The holds queue is randomized based on the following factors:
 
-The purpose of this script for Next Search Catalog is to regenerate the pick-list at 1 hour intervals in the mornings and at 2 hour intervals in the afternoon so that requests for materials are spread amongst the libraries randomly.
+#. The holds queue is only randomized if multiple copies are available.
+#. If an item is available at the request's pickup location that copy will always be assigned to fill the request regardless of the availability of any other copies.
 
 The settings for this cron-job are:
 
@@ -49,9 +52,10 @@ Examples:
 ^^^^^^^^^
 
 1. The holds queue is random so, on average, a book available at 4 libraries should appear on one of those library's holds list 25% of the time.  Since it's random, though, it's entirely possible for an item to randomly be assigned to the same holds list again, and again, and again, and again.
-  A patron places a request on THE BRETHEREN by John Grisham to be picked up at HORTON.  Copies are available at BASEHOR, LEAVENWRTH, RICHMOND, and HIAWATHA.  When staff at LEAVENWRTH run the holds report at 8:00 a.m., their copy of this book is on their holds list.  But they don't have the time to finish pulling the items for this list before 9:00 a.m. so when the holds queue is re-built at 8:52 a.m., the book is re-assigned to the RICHMOND holds queue.  But RICHMOND is closed today, so no one at RICHMOND pulls the request.  Since the holds queue ignores closed days, at 9:52 a.m., the book is re-assigned to RICHMOND again.  And then, again, at 10:52, the book is re-assigned to RICHMOND a third time.  Then at 12:52, the book is re-assigned to BASEHOR.
+  Example:  a patron places a request on THE BRETHEREN by John Grisham to be picked up at HORTON.  Copies are available at BASEHOR, LEAVENWRTH, RICHMOND, and HIAWATHA.  When staff at LEAVENWRTH run the holds report at 8:00 a.m., their copy of this book is on their holds list.  But they can't find their copy of this title so when the holds queue is re-built at 8:52 a.m., the book is re-assigned to the RICHMOND holds queue.  But RICHMOND is closed today, so no one at RICHMOND pulls the request.  Since the holds queue ignores closed days, at 9:52 a.m., the request is re-assigned to RICHMOND again.  And then, again, at 10:52, the request is re-assigned to RICHMOND a third time.  Then at 12:52, the request is re-assigned to BASEHOR.  Every time the holds queue is re-built, the process is randomized.
 
-2. A patron places a request on CODE OF THE WOOSTERS by P.G. Wodehouse to be picked up at OTTAWA.  Copies are available at BONNERSPGS, SENECA, and OVERBROOK.  Staff at OVERBROOK print their holds list at 8:00 a.m.  At 8:05 a.m., a patron returns a copy of CODE OF THE WOOSTERS owned by EUDORA (which was unavailable when the holds list was printed at 8:00 a.m.).  When the EUDORA copy is checked in, the hold will be triggered for the patron at OTTAWA.  When staff at OVERBROOK check in their copy, the request is not triggered because another item is already en route to OTTAWA to fill the request.
+2.  Any item attached to a bibliographic record can fill a title level request - even if its not the copy currently assigned to the request in the holds queue.
+  Example:  a patron places a request on CODE OF THE WOOSTERS by P.G. Wodehouse to be picked up at OTTAWA.  Copies are available at BONNERSPGS, SENECA, and OVERBROOK.  A fourth copy is owned by EUDORA, but it is checked out and not available.  Staff at OVERBROOK print their holds list at 8:00 a.m.  At 8:05 a.m., a patron returns the EUDORA copy.  When the EUDORA copy is checked in, the hold will be triggered for the patron at OTTAWA.  When staff at OVERBROOK check in their copy, the request is not triggered because the EUDORA item is already en route to OTTAWA to fill the request.
 
 
 .. _cron_empty_bibs:
