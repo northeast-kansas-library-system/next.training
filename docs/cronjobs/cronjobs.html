@@ -82,8 +82,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../basic/appendix.html">Notes/appendix for basic staff training</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Cron-jobs</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Automatic processes running on our system</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#holds-queue-generation">Holds queue generation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#empty-bibliographic-record-deletion">Empty bibliographic record deletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#holds-queue-generation">Holds queue generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#empty-bibliographic-record-deletion">Empty bibliographic record deletion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Examples:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -159,8 +165,8 @@
 <div class="section" id="holds-queue-generation">
 <span id="holds-queue"></span><h2>Holds queue generation<a class="headerlink" href="#holds-queue-generation" title="Permalink to this headline">¶</a></h2>
 <p>This script runs every day at:</p>
-<table border="1" class="colwidths-given docutils" id="id1">
-<caption><span class="caption-text">Holds queue schedule</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<table border="1" class="colwidths-given docutils" id="id2">
+<caption><span class="caption-text">Holds queue schedule</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -226,13 +232,30 @@
 <li>nekls-koha $KOHA_CRON_PATH/holds/build_holds_queue.pl tells the server which script to execute</li>
 <li>&gt;/dev/null 2&gt;&amp;1 prevents the script from mailing an error log to the system administrator</li>
 </ul>
+<div class="section" id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>The holds queue is random so, on average, a book available at 4 libraries should appear on one of those library’s holds list 25% of the time.  Since it’s random, though, it’s entirely possible for an item to randomly be assigned to the same holds list again, and again, and again, and again.</li>
+</ol>
+<blockquote>
+<div>A patron places a request on THE BRETHEREN by John Grisham to be picked up at HORTON.  Copies are available at BASEHOR, LEAVENWRTH, RICHMOND, and HIAWATHA.  When staff at LEAVENWRTH run the holds report at 8:00 a.m., their copy of this book is on their holds list.  But they don’t have the time to finish pulling the items for this list before 9:00 a.m. so when the holds queue is re-built at 8:52 a.m., the book is re-assigned to the RICHMOND holds queue.  But RICHMOND is closed today, so no one at RICHMOND pulls the request.  Since the holds queue ignores closed days, at 9:52 a.m., the book is re-assigned to RICHMOND again.  And then, again, at 10:52, the book is re-assigned to RICHMOND a third time.  Then at 12:52, the book is re-assigned to BASEHOR.</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>A patron places a request on CODE OF THE WOOSTERS by P.G. Wodehouse to be picked up at OTTAWA.  Copies are available at BONNERSPGS, SENECA, and OVERBROOK.  Staff at OVERBROOK print their holds list at 8:00 a.m.  At 8:05 a.m., a patron returns a copy of CODE OF THE WOOSTERS owned by EUDORA (which was unavailable when the holds list was printed at 8:00 a.m.).  When the EUDORA copy is checked in, the hold will be triggered for the patron at OTTAWA.  When staff at OVERBROOK check in their copy, the request is not triggered because another item is already en route to OTTAWA to fill the request.</li>
+</ol>
+</div>
 </div>
 <div class="section" id="empty-bibliographic-record-deletion">
 <span id="cron-empty-bibs"></span><h2>Empty bibliographic record deletion<a class="headerlink" href="#empty-bibliographic-record-deletion" title="Permalink to this headline">¶</a></h2>
 <p>This script runs every Sunday morning at 2:20 a.m.</p>
 <p>We have a cron-job running on the server that automatically deletes bibliographic records that were created more than two weeks ago but do not have any items attached to them.</p>
 <p>The purpose of this script for Next Search Catalog is to remove empty bibliographic records in a timely manner so that we do not have empty records taking up space in the catalog and confusing staff or patrons.</p>
-<p>This cron-job covers three situations for us.  In practice, when cataloging staff delete all of the items attached to a bibliographic record, they should also delete the bibliographic record - sometimes this does not happen.  Similarly, if cataloging staff add a bibliographic record to the catalog, they should add items to that record in a timely manner - but that does not happen in some circumstances.  It is also possible for the last item attached to a bibliographic record to be deleted automatically if the item is overdue for more than 45 days.  All three of these situations create circumstances where we have bibliographic records taking space in the catalog without any items attached to them.  Bibliographic records without items can be confusing for staff and patrons.</p>
+<p>This cron-job covers three situations for us:</p>
+<ol class="arabic simple">
+<li>In practice, when cataloging staff delete all of the items attached to a bibliographic record, they should also delete the bibliographic record - sometimes this does not happen.</li>
+<li>Similarly, if cataloging staff add a bibliographic record to the catalog, they should add items to that record in a timely manner - but that does not happen in some circumstances.</li>
+<li>It is also possible for the last item attached to a bibliographic record to be deleted automatically if the item has been marked as “Lost (more than 45 days overdue)” or “Missing (unable to locate on the shelf)” or “Withdrawn” for more than 13 months.</li>
+</ol>
+<p>All three of these situations create circumstances where we have bibliographic records taking space in the catalog without any items attached to them.  Bibliographic records without items can be confusing for staff and patrons because a title is visible but there are no physical items available if anyone actually wants to use a copy of that title.</p>
 <p>The settings for this cron-job are:</p>
 <div class="highlight-perl notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mi">20</span> <span class="mi">2</span> <span class="o">*</span> <span class="o">*</span> <span class="mi">0</span> <span class="n">nekls</span><span class="o">-</span><span class="n">koha</span> <span class="nv">$HOME</span><span class="sr">/drop_empty_bibs.pl --days=14 --ignore_url --silent --update &gt; /</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
 </pre></div>
@@ -245,6 +268,14 @@
 <li>–silent tells the script to ignore error messages</li>
 <li>–update &gt; /dev/null prevents the script from mailing an error log to the system administrator</li>
 </ul>
+<div class="section" id="id1">
+<h3>Examples:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>A bibliographic record exists for a 1975 paperback edition of DAY OF THE JACKAL by Frederic Forsythe.  The bibliographic record was added to the catalog on September 9, 2005.  Only one item is attached to this bibliographic record.  Staff at NEKLS delete the only item attached to this bibliographic record on February 6, 2019, and they forget to delete the bibliographic record when they delete the item.  This bibliographic record will be deleted at 2:20 a.m on Sunday, February 10, because the record is more than 14 days old and it has zero items attached to it.</li>
+<li>Staff at NEKLS add a bibliographic record for a new edition of THE ROLLING STONE RECORD GUIDE on March 6, 2019.  If no item is attached to this record by 2:20 a.m. on March 24, the record will automatically be deleted because it is more than 14 days old and it has zero items attached to it.</li>
+<li>The only copy of FEAR AND LOATHING IN LAS VEGAS by Hunter S. Thompson has was marked as “Lost (more than 45 days overdue)” on June 1, 2018.  Unless the item is found and checked in, the item will be automatically deleted on July 1, 2019.  On Sunday, July 7, 2019, at 2:20 a.m., the bibliographic record will automatically be deleted because the record is more than 14 days old and it has zero items attached to it.</li>
+</ol>
+</div>
 </div>
 </div>
 
