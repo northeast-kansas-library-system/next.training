@@ -8,10 +8,11 @@ Next Search Catalog Staff Training
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    basic/basics
    basic/appendix
+   cronjobs/index
 
 ..  opac
 ..  staff

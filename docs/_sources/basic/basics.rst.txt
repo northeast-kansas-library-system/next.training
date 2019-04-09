@@ -23,7 +23,6 @@ Next Search Catalog history
  - Highland Community College joined Next Search Catalog.
  - As of January 2019, Next Search Catalog includes 44 public libraries; 1 school district; and 1 community college library.
 
-
  .. raw:: latex
 
      \newpage
