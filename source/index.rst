@@ -13,6 +13,7 @@ Next Search Catalog Staff Training
    basic/basics
    basic/appendix
    cronjobs/index
+   upgrades/cache
 
 ..  opac
 ..  staff
