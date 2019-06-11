@@ -48,6 +48,7 @@ An alternative way of clearing the cache in Firefox:
   #. Wait 60 seconds then re-start Firefox
 
   .. image:: ../images/000490.jpg
+     :scale: 50 %
   .. image:: ../images/000500.jpg
   .. image:: ../images/000510.jpg
 
@@ -67,6 +68,9 @@ An alternative way of clearing the cache in Chrome:
   #. Click on the X to close Chrome
   #. Wait 60 seconds then re-start Chrome
 
+  .. image:: ../images/000520.jpg
+  .. image:: ../images/000530.jpg
+
 ###################
 Firefox - Method #3
 ###################
@@ -82,6 +86,11 @@ If you follow this method, you should never need to clear your Firefox cache aga
   #. Click "OK"
   #. Click on the X to close Firefox
   #. Wait 60 seconds then re-start Firefox
+
+  .. image:: ../images/000540.jpg
+     :scale: 50 %
+  .. image:: ../images/000550.jpg
+  .. image:: ../images/000560.jpg
 
 This method tells Firefox to clear its own cache every time you close Firefox.  As far as overall privacy and confidentiality goes, checking all of the boxes under "Settings for Clearing History" is the best practice.  It prevents anyone from accessing any data your web browser stores.  For most users, however, the convenience of having Firefox store your passwords and browsing preferences outweighs most user's privacy concerns.
 
