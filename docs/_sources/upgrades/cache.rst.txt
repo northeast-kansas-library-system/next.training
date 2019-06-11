@@ -23,7 +23,7 @@ Chrome - Method #1
 To clear the cache in Chrome:
 
   #. Start Chrome and type “SHIFT-CTRL-DELETE” to bring up the “Clear browsing data” window
-  #. Make sure the “Time range” drop down says “the beginning of time”
+  #. Make sure the “Time range” drop down says “all time”
   #. Make sure the “Cached images and files” checkbox is checked
   #. Click on the “Clear data” button
   #. Click on the X to close Chrome
