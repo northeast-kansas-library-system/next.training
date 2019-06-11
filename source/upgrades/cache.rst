@@ -38,13 +38,18 @@ Firefox - Method #2
 An alternative way of clearing the cache in Firefox:
 
   #. Start Firefox
-  #. Click on the options menu icon on the upper right hand side of the browser  #. Click on “Options”
+  #. Click on the options menu icon on the upper right hand side of the browser
+  #. Click on “Options”
   #. Click on “Privacy & Security” on the left hand side of the screen
   #. Scroll down to "Cookies and Site Data"
   #. Click on "Clear data" and make sure "Cached Web Content" is checked
   #. Click on "Clear"
   #. Click on the X to close Firefox
   #. Wait 60 seconds then re-start Firefox
+
+  .. image:: ../images/000490.jpg
+  .. image:: ../images/000500.jpg
+  .. image:: ../images/000510.jpg
 
 ##################
 Chrome - Method #2
