@@ -274,7 +274,7 @@ Scan the item barcode in the “Enter item barcode”field
 
 The "Checkouts table will update with information about the item you just checked out"
 
-.. image:: ../images/290.jpg
+.. image:: ../images/00290.jpg
 
 Follow your library’s procedures for errors if any error messages pop up
 
