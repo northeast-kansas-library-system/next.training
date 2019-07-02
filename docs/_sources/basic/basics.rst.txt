@@ -211,7 +211,7 @@ After you enter the barcode number, if the item needs to be shipped to another l
 
 2. Transfering an item that is owned by another library back to its home
 
-.. image:: ../images/170.jpg
+.. image:: ../images/00170.jpg
 
 In either case you need to follow the procedures at your library for shipping items between libraries.  If your library prints receipts, the courier code for the receiving library should match the courier code on the KLE label you use for shipping the item.
 
@@ -262,7 +262,7 @@ Access the patron’s account
 
 Make sure you’ve got the correct account
 
-.. image:: ../images/270.jpg
+.. image:: ../images/00270.jpg
 
 .. raw:: latex
 
@@ -270,11 +270,11 @@ Make sure you’ve got the correct account
 
 Scan the item barcode in the “Enter item barcode”field
 
-.. image:: ../images/280.jpg
+.. image:: ../images/00280.jpg
 
 The "Checkouts table will update with information about the item you just checked out"
 
-.. image:: ../images/290.jpg
+.. image:: ../images/00290.jpg
 
 Follow your library’s procedures for errors if any error messages pop up
 
