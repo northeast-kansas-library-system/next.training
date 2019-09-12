@@ -98,6 +98,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#checking-in-an-item-on-hold">Checking in an item on hold</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#checking-in-an-item-to-be-shipped">Checking in an item to be shipped</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#checking-in-an-item-that-had-been-declared-lost-or-missing">Checking in an item that had been declared lost or missing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checking-in-an-item-with-a-damaged-status">Checking in an item with a Damaged status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#checking-in-an-item-with-a-message">Checking in an item with a message</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#checking-in-an-item-that-cannot-be-found">Checking in an item that cannot be found</a></li>
 </ul>
@@ -354,8 +355,23 @@
 </div>
 <div class="section" id="checking-in-an-item-that-had-been-declared-lost-or-missing">
 <h3>Checking in an item that had been declared lost or missing<a class="headerlink" href="#checking-in-an-item-that-had-been-declared-lost-or-missing" title="Permalink to this headline">¶</a></h3>
-<p>If a pop-up window appears indicating that the item was lost but has now been found, this indicates that the item had a status of “LIST LOST STATUSES” at the time it was checked in.  Checking the item in will remove any of these statuses from the item record and it should remove any fees to any patron that may have been billed for as lost item replacement fees.</p>
+<p>If a pop-up window appears indicating that the item was lost but has now been found, this indicates that the item had one of the following LOST statuses at the time it was checked in:</p>
+<ul class="simple">
+<li>(Lost)</li>
+<li>Lost (more than 45 days overdue) [automatically added]</li>
+<li>Lost (more than 45 days overdue) [manually added]</li>
+<li>Lost (Patron Claims Returned)</li>
+<li>Missing (inventory)</li>
+<li>Missing (unable to location on shelf)</li>
+<li>Tornado Damage</li>
+</ul>
+<p>Checking the item in will remove any of these statuses from the item record and it should remove any fees to any patron that may have been billed for as lost item replacement fees.</p>
 <img alt="../_images/180.jpg" src="../_images/180.jpg" />
+</div>
+<div class="section" id="checking-in-an-item-with-a-damaged-status">
+<h3>Checking in an item with a Damaged status<a class="headerlink" href="#checking-in-an-item-with-a-damaged-status" title="Permalink to this headline">¶</a></h3>
+<p>If a pop-up window appears indicating that the item has been marked with a DAMAGED status, checking the item in will not remove the damaged status.  The pop-up that appears merely indicates that the item has a DAMAGED status.  If you wish to remove the DAMAGED status, that must be done manually.</p>
+<img alt="../_images/185.jpg" src="../_images/185.jpg" />
 </div>
 <div class="section" id="checking-in-an-item-with-a-message">
 <h3>Checking in an item with a message<a class="headerlink" href="#checking-in-an-item-with-a-message" title="Permalink to this headline">¶</a></h3>

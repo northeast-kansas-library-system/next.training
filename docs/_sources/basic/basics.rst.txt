@@ -223,9 +223,27 @@ In either case you need to follow the procedures at your library for shipping it
 Checking in an item that had been declared lost or missing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If a pop-up window appears indicating that the item was lost but has now been found, this indicates that the item had a status of "LIST LOST STATUSES" at the time it was checked in.  Checking the item in will remove any of these statuses from the item record and it should remove any fees to any patron that may have been billed for as lost item replacement fees.
+If a pop-up window appears indicating that the item was lost but has now been found, this indicates that the item had one of the following LOST statuses at the time it was checked in:
+
+* (Lost)
+* Lost (more than 45 days overdue) [automatically added]
+* Lost (more than 45 days overdue) [manually added]
+* Lost (Patron Claims Returned)
+* Missing (inventory)
+* Missing (unable to location on shelf)
+* Tornado Damage
+
+
+Checking the item in will remove any of these statuses from the item record and it should remove any fees to any patron that may have been billed for as lost item replacement fees.
 
 .. image:: ../images/180.jpg
+
+Checking in an item with a Damaged status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If a pop-up window appears indicating that the item has been marked with a DAMAGED status, checking the item in will not remove the damaged status.  The pop-up that appears merely indicates that the item has a DAMAGED status.  If you wish to remove the DAMAGED status, that must be done manually.
+
+.. image:: ../images/185.jpg
 
 Checking in an item with a message
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
