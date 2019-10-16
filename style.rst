@@ -24,3 +24,17 @@ Link to an image:
 ``inline literal``
 
 reference_
+
+Code blocks
+-----------
+
+.. code-block:: sql
+  :linenos:
+
+  SELECT
+    *
+  FROM
+    table
+
+.. code-block:: html
+    :linenos:

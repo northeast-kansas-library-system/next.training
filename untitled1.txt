@@ -1,0 +1,76 @@
+SELECT
+  paymentss.branchcode,
+  account_offsets.type,
+  ABS(account_offsets.amount) AS amount1,
+  If(
+    feess.accounttype = "A",
+    "Account management fee",
+    If(
+      feess.accounttype = "C",
+      "Credit",
+      If(
+        feess.accounttype = "Copie",
+        "Copier fees",
+        If(
+          feess.accounttype = "CR",
+          "Credit",
+          If(
+            feess.accounttype LIKE "Damag",
+            "Damaged item",
+            If(feess.accounttype LIKE "F%",
+              "Late fee",
+              feess.accounttype)))))) AS FEE_TYPE,
+  account_offsets.created_on AS PAID_ON,
+  Replace(Replace(Replace(Trim(paymentss.note), "\n", ""), "\r", ""), "  ", " ") AS note,
+  paymentss.borrowernumber,
+  paymentss.userid
+FROM
+  account_offsets
+  INNER JOIN (
+    SELECT
+      borrowers.branchcode,
+      accountlines.accountlines_id,
+      accountlines.issue_id,
+      accountlines.borrowernumber,
+      accountlines.accountno,
+      accountlines.itemnumber,
+      accountlines.date,
+      accountlines.amount,
+      accountlines.description,
+      accountlines.accounttype,
+      accountlines.payment_type,
+      accountlines.amountoutstanding,
+      accountlines.timestamp,
+      accountlines.lastincrement,
+      accountlines.note,
+      accountlines.manager_id,
+      borrowers.userid
+    FROM
+      accountlines
+      JOIN borrowers
+        ON borrowers.borrowernumber = accountlines.manager_id
+    WHERE
+      borrowers.branchcode = 'PAOLA'
+  ) paymentss
+    ON paymentss.accountlines_id = account_offsets.credit_id
+  INNER JOIN (
+    SELECT
+      accountlines.accountlines_id,
+      accountlines.accounttype
+    FROM
+      accountlines
+  ) feess
+    ON feess.accountlines_id = account_offsets.debit_id
+WHERE
+  account_offsets.type = 'Payment'
+GROUP BY
+  paymentss.branchcode,
+  account_offsets.type,
+  account_offsets.created_on,
+  paymentss.borrowernumber,
+  paymentss.userid,
+  account_offsets.amount,
+  feess.accounttype,
+  paymentss.note
+ORDER BY
+  PAID_ON DESC
