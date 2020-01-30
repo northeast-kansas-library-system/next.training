@@ -12,7 +12,7 @@ The information we need is:
 
 The best ways to contact us are:
 
-- staff@nekls.org
+- nekls.staff@nekls.org
 - nexthelp@nekls.org
 - courier@nekls.org
 - Phone 785-838-4090 or (toll free) 888-296-6963 or (after hours) 785-813-1356
