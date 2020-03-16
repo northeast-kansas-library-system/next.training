@@ -8,6 +8,7 @@ Next Search Catalog Staff Training - Procedures
    :maxdepth: 3
 
    closures
+   covid19
 
 ..  opac
 ..  staff
