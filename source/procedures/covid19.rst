@@ -26,7 +26,7 @@ NEKLS staff will do the following:
 Expected results
 ^^^^^^^^^^^^^^^^
 
-- Stop courier
+- Stop courier deliveries after all materials en route to your library have arrived
 - Inform other Next Search Catalog libraries
 - Prevent undeserved late fees
 - Prevent new transfers to closed library
@@ -37,7 +37,7 @@ Expected results
 Process for NEKLS staff
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-1. The KLE coordinator will contact Henry Industries to stop courier service for the duration of the closure
+1. The KLE coordinator will contact Henry Industries to stop courier service per arrangements with your library
 #. The KLE coordinator will contact other courier libraries to inform them of the disruption in service
 #. The Next Search Catalog Coordinator will contact other Next members about the closure
 #. Next staff will mark the closure dates in the calendar for the closed library in Koha *and* in ShareIt
@@ -67,7 +67,7 @@ Process for NEKLS staff
     issues.date_due
 
 7. Next staff will download the report as a csv file and send the csv file to ByWater Solutions via their support system at https://ticket.bywatersolutions.com/
-#. Next staff will ask ByWater to change the due dates on all of the itemnumbers in the file to a day 7 days after your re-opening
+#. Next staff will ask ByWater to change the due dates on all of the itemnumbers in the file to a day 7 days after your expected re-opening
 #. After ByWater updates the due dates, Next staff will inform the library
 #. Next staff will suspend any unfilled requests assigned for pickup at the closed library and leave a message on the patron's account informing them of the reason the requests are being suspended
 
@@ -98,13 +98,7 @@ Process for NEKLS staff
     reserves.borrowernumber
 
 12. Once the report has been run, Next staff will click on the "Open in a new window" link for each line in the report and suspend the requests for pickup at the affected library until the day that the library anticipates they will re-open
-#. After suspending requests, staff will add the following message to each patron's account as an OPAC message:
-
-.. code-block:: txt
-
-  All requests for pickup at LIBRARYNAME have been temporarily suspended due to an unexpected closure at that library.  The suspension will be lifted automatically when the library reopens.
-
-14. Next staff will modify the drop-down in the OPAC so that patrons cannot select the closed library as a pickup location for new requests
+13. Next staff will modify the drop-down in the OPAC so that patrons cannot select the closed library as a pickup location for new requests
 
     To do this, staff need to add the following jQuery to the OPACUserJS system preference:
 
@@ -112,15 +106,8 @@ Process for NEKLS staff
 
   $("option[value='CLOSEDBRANCHCODE']").attr("value","NEWBRANCHCODE").html('BRANCHNAME: Closed to requests until REOPENINGDATE');
 
-15. Next staff will modify the drop-down in the staff client so that staff cannot select the closed library as a pickup location for new requests
-
-    To do this, staff need to add the following jQuery to the IntranetuserJS system preference:
-
-.. code-block:: java
-
-  $("#pickup option[value='CLOSEDBRANCHCODE']").attr("value","NEWBRANCHCODE").html('CLOSEDBRANCHNAME: Closed to requests until REOPENINGDATE.');
-
-16. Add the branchcode from the home branch to the OpacHiddenItems system preference
+14. Next staff will modify the drop-down in the staff client so that staff if staff place requests to be picked up at a closed library, those requests will not start until after the expected re-opening date at the pickup library
+15. Add the branchcode from the home branch to the OpacHiddenItems system preference
 
     To do this, staff need to add the following line to the OpacHiddenItems system preference:
 
