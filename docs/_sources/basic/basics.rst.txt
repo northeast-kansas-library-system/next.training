@@ -8,7 +8,7 @@ Next Search Catalog history
 - The early years:
  - NExpress began as a courier system among Northeast Kansas libraries, and several Northeast Kansas Library System members participated with the Kansas City Public Library Consortia (KCLC) through 2008.
 - 2007:
- - In 2007, NEKLS began to explore alternative options to KCLC, and NEKLS decided in 2008 to manage its own shared catalog called "NExpress."  The Koha integrated library management system was chosen and NEKLS contracted with LibLime - a division of Progressive Technology Federal Systems, Inc. (PTFS) - for support and server management.
+ - In 2007, NEKLS began to explore alternative options to KCLC, and NEKLS decided in 2008 to manage its own shared catalog called "NExpress."  The :term:`Koha` integrated library management system was chosen and NEKLS contracted with LibLime - a division of Progressive Technology Federal Systems, Inc. (PTFS) - for support and server management.
 - 2008:
  - The NExpress shared catalog went live using Koha on August 15, 2008, with 13 participating libraries.
 - 2009:
